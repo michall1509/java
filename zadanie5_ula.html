@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Ulan 3K</title>
+        <script>
+            function WinOpen_Ulan_1()
+            {
+                window.open("grafika1.html","grafika1","toolbar=no,directories=no,menubar=no,height=230,width=150,top=20,left=275");
+            }
+
+            function WinOpen_Ulan_2()
+            {
+                window.open("grafika2.html","grafika2","toolbar=no,directories=no,menubar=no,height=230,width=150,top=20,right=355");
+            }
+
+            function WinOpen_Ulan_3()
+            {
+                window.open("grafika3.html","grafika3","toolbar=no,directories=no,menubar=no,height=230,width=150,top=10,left=550");
+            }
+            
+            function WinOpen_Ulan_4()
+            {
+                window.open("grafika4.html","grafika4","toolbar=no,directories=no,menubar=no,height=230,width=150,top=10,right=355");
+            }
+
+            function okno_zamknij_Ulan_1()
+            { 
+                window.close() 
+            } 
+        </script>
+        <style>
+            #hhh {
+                color: red;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+ <p id="hhh">wykonał: Dawid Ulanicki mój numer w dziennuku 26, czyli mam układ [(26) mod 4 = 2] układ 2</p>
+<body>
+ <form>
+ <input type="button" name="grafika1" value="Grafika1" onclick="WinOpen_Ulan_1(' ')">
+ <input type="button" name="grafika2" value="Grafika2" onclick="WinOpen_Ulan_2(' ')">
+ <input type="button" name="grafika3" value="Grafika3" onclick="WinOpen_Ulan_3(' ')">
+ <input type="button" name="grafika4" value="Grafika4" onclick="WinOpen_Ulan_4(' ')">
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_Ulan_1()"/>
+ </form>
+</body>
+</html>
