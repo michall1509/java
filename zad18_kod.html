@@ -1,0 +1,45 @@
+<pre>
+&lt;!DOCTYPE html&gt;   
+&lt;html&gt;
+    &lt;head&gt;    
+        &lt;title&gt; Użycie fukcji &lt;/title&gt;    
+        &lt;meta charset=&quot;utf-8&quot;&gt;   
+    &lt;/head&gt;  
+    &lt;body&gt; 
+        &lt;div style=&quot;color:navy;font-size:50px;&quot;&gt; 
+            &lt;script language=&quot;JavaScript&quot;&gt; 
+                var a = parseFloat(prompt(&quot;a=&quot;,&quot;&quot;)); 
+                var b = parseFloat(prompt(&quot;b=&quot;,&quot;&quot;)); 
+
+                function suma_now(a, b) { 
+                    return a + b; 
+                } 
+
+                function odejmowanie_now(a, b) {
+                    return a - b;
+                }
+
+                function mnozenie_now(a, b) {
+                    return a * b;
+                }
+
+                function do_kwadratu_now(a, b) {
+                    return [a*a, b*b];
+                }
+
+                function reszta_z_dzielenia_a_przez_b_now(a, b) {
+                    return a % b;
+                }
+
+                console.log(do_kwadratu_now(a,b));
+
+                document.write(&quot;suma=&quot; + suma_now(a,b)+&quot;&lt;br&gt;&quot;); 
+                document.write(&quot;odejmowanie=&quot; + odejmowanie_now(a,b)+&quot;&lt;br&gt;&quot;);
+                document.write(&quot;mnozenie=&quot; + mnozenie_now(a,b) + &quot;&lt;br&gt;&quot;);
+                document.write(&quot;kwadrat=&quot; + do_kwadratu_now(a,b)[0] + &quot;; &quot; + do_kwadratu_now(a,b)[1] + &quot;&lt;br&gt;&quot;);
+                document.write(&quot;reszta=&quot; + reszta_z_dzielenia_a_przez_b_now(a,b) + &quot;&lt;br&gt;&quot;);
+            &lt;/script&gt; 
+        &lt;/div&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt;
+</pre>

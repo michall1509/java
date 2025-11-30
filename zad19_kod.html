@@ -1,0 +1,34 @@
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Wszystko o kwadracie&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;script type="text/javascript" defer&gt;
+                
+            function pole_now() {
+                let a_now = parseFloat(document.getElementById(&quot;dlugosc&quot;).value);
+                let b_now = a_now*a_now;
+                document.getElementById(&quot;nazwa&quot;).innerHTML = `Pole kwadratu=${b_now.toFixed(2)} cm^2`;
+            }
+
+            function obwod_now() {
+                let a_now = parseFloat(document.getElementById(&quot;dlugosc&quot;).value);
+                let b_now = 4*a_now;
+                document.getElementById(&quot;nazwa&quot;).innerHTML = `Obwód kwadratu=${b_now.toFixed(2)} cm`;
+            }
+
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Wszystko o KWADRACIE&lt;/h1&gt;&lt;br&gt;&lt;br&gt;
+        Podaj długość boku:
+        &lt;input type=&quot;text&quot; id=&quot;dlugosc&quot; value=&quot;podaj dlugosc&quot;&gt;cm&lt;br&gt;&lt;br&gt;
+
+        &lt;button name=&quot;pole&quot; onclick=&quot;pole_now()&quot;&gt;Oblicz pole&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+        &lt;button name=&quot;obwod&quot; onclick=&quot;obwod_now()&quot;&gt;Oblicz obwód&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+        
+        &lt;div style=&quot;color: red; font-size: 50px;&quot; id=&quot;nazwa&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>

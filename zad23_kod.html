@@ -1,0 +1,50 @@
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            function drabina_nowak(d, x) {
+
+                let v =  Math.sqrt((d*d)+(x*x));
+
+                document.getElementsByName(&quot;drabina&quot;)[0].value = v;
+                document.getElementsByName(&quot;wyprowadz_drabina_now&quot;)[0].innerHTML = `Długość Drabiny = ${v.toFixed(2)}`;
+                alert(`Długość Drabiny = ${v.toFixed(2)}`);
+            }
+
+            function alfa_nowak(d, x) {
+
+                let sinA = d / Math.sqrt((d*d)+(x*x));
+                let aRad = Math.asin(sinA);
+                let aDeg = aRad * (180 / Math.PI);
+
+                document.getElementsByName(&quot;alfa&quot;)[0].value = aDeg.toFixed(2);
+                document.getElementsByName(&quot;wyprowadz_alfa_now&quot;)[0].innerHTML = `Alfa = ${aDeg.toFixed(2)}`;
+                alert(`Alfa = ${aDeg.toFixed(2)}`)
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Pobliczania odległości od drabiny i kąta&lt;/p&gt;
+        &lt;form name=&quot;formularz&quot; action=&quot;...&quot; onsubmit=&quot;drabina_nowak(this.d_dana_now.value, this.x_dana_now.value); alfa_nowak(this.d_dana_now.value, this.x_dana_now.value); return false;&quot;&gt;   
+            Podaj d= 
+                &lt;input  size=&quot;6&quot;  name=&quot;d_dana_now&quot;&gt; 
+            Podaj x= 
+                &lt;input  size=&quot;6&quot;  name=&quot;x_dana_now&quot;&gt; 
+                            &lt;br&gt;   &lt;br&gt; 
+                &lt;input  TYPE=&quot;submit&quot;  Value=&quot;oblicz&quot; &gt; 
+                            &lt;br&gt;   &lt;br&gt; 
+            Drabina= 
+                &lt;input  size=&quot;6&quot;  name=&quot;drabina&quot;&gt; 
+            Alfa= 
+                &lt;input  size=&quot;6&quot;  name=&quot;alfa&quot;&gt; 
+        &lt;/form&gt;
+        &lt;br&gt;
+        &lt;table&gt;
+            &lt;tr name=&quot;wyprowadz_drabina_now&quot;&gt;&lt;/tr&gt;
+            &lt;tr name=&quot;wyprowadz_alfa_now&quot;&gt;&lt;/tr&gt;
+        &lt;/table&gt;&lt;br&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
