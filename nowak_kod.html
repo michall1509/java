@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,12 +18,12 @@
             console.log(zJS);
 
             fetch("./" + zHTML).then(response => response.text())
-            .then(html => htmlArea.innerHTML = html)
+            .then(html => htmlArea.value = html)             <!-- CHANGED HERE -->
             .catch(error => console.error(error));
 
             if (zJS != "none") {
                 fetch("./" + zJS).then(response => response.text())
-                .then(js => jsArea.innerHTML = js)
+                .then(js => jsArea.value = js)              <!-- CHANGED HERE -->
                 .catch(error => console.error(error));
             }
             else {
@@ -40,4 +41,4 @@
         <label id="lblJS" for="js">KOD JAVASCRIPT</label><br>
         <textarea id="js" rows=30 cols=100></textarea>
     </body>
-</html>
+</html
