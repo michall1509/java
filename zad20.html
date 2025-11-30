@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script defer>
+            let xa_now, ya_now;
+            let xb_now, yb_now;
+            let xc_now, yc_now;
+
+            function AB_now() {
+                return Math.sqrt(Math.pow(xa_now - xb_now, 2) + Math.pow(ya_now - yb_now, 2));
+            }
+
+            function BC_now() {
+                return Math.sqrt(Math.pow(xb_now - xc_now, 2) + Math.pow(yb_now - yc_now, 2));
+            }
+
+            function AC_now() {
+                return Math.sqrt(Math.pow(xa_now - xc_now, 2) + Math.pow(ya_now - yc_now, 2));
+            }
+
+            function oblicz() {
+                xa_now = parseFloat(document.getElementById('input_XA').value);
+                ya_now = parseFloat(document.getElementById('input_YA').value);
+
+                xb_now = parseFloat(document.getElementById('input_XB').value);
+                yb_now = parseFloat(document.getElementById('input_YB').value);
+
+                xc_now = parseFloat(document.getElementById('input_XC').value);
+                yc_now = parseFloat(document.getElementById('input_YC').value);
+
+                document.getElementById("res_AB").innerHTML = `AB: ${AB_now()}`;
+                document.getElementById("res_AC").innerHTML = `AC: ${AC_now()}`;
+                document.getElementById("res_BC").innerHTML = `BC: ${BC_now()}`;
+
+                console.log(xa_now);
+                console.log(ya_now);
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <p>A:</p>
+        <span>X: </span><input type="text" id="input_XA"><br>
+        <span>Y: </span><input type="text" id="input_YA"><br>
+        
+        <p>B:</p>
+        <span>X: </span><input type="text" id="input_XB"><br>
+        <span>Y: </span><input type="text" id="input_YB"><br>
+
+        <p>C:</p>
+        <span>X: </span><input type="text" id="input_XC"><br>
+        <span>Y: </span><input type="text" id="input_YC"><br>
+
+        <p id="res_AB"></p>
+        <p id="res_BC"></p>
+        <p id="res_AC"></p>
+
+        <br><br><button onclick="oblicz()">Oblicz</button>
+    </body>
+</html>

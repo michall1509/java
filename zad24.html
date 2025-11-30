@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const imie = "Michał";
+
+            let x1_now = parseFloat(prompt("podaj x1"));
+            let x2_now = parseFloat(prompt("podaj x2"));
+
+            document.write(`x1=${x1_now}&nbsp&nbsp&nbsp&nbsp&nbspx2=${x2_now}<br>`);
+            document.write(`x1=${x1_now}&nbsp&nbsp&nbsp&nbsp&nbspx1=${((x1_now * Math.PI) / 180).toFixed(2)}<br>`)
+
+            let y1 = 3 * Math.pow(x1_now, imie.length / (imie.length + 2));
+            
+            let rad_x1_now = (x1_now * Math.PI) / 180;
+
+            let y2 = 2 * Math.cos(rad_x1_now) + 3 * Math.sin(rad_x1_now);
+            let y3 = Math.pow(Math.pow(x1_now, 5) + (2 * Math.pow(x2_now, 4)), 1/3) * Math.abs(x1_now - x2_now);
+
+            document.write(`y1=${y1.toFixed(2)}<br>`);
+            document.write(`y2=${y2.toFixed(2)}<br>`);
+            document.write(`y3=${y3.toFixed(2)}<br>`);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

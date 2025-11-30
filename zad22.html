@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function Pole_nowak(a_now, b_now) {
+                let w = parseFloat(a_now) * parseFloat(b_now);
+                document.getElementsByName("pole")[0].value = `${w.toFixed(2).toString()} cm`;
+                document.getElementsByName("wyprowadz_pole_now")[0].innerHTML = `Pole = ${w.toFixed(2).toString()} cm`;
+            }
+
+            function obwod_nowak(a_now, b_now) {
+                let w = (parseFloat(a_now)*2) + (parseFloat(b_now)*2);
+                document.getElementsByName("obw")[0].value = `${w.toFixed(2).toString()} cm^2`;
+                document.getElementsByName("wyprowadz_obwod_now")[0].innerHTML = `Obwód = ${w.toFixed(2).toString()} cm^2`;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="formularz" action="..." onsubmit="Pole_nowak(this.a_dana_now.value, this.b_dana_now.value); obwod_now(this.a_dana_now.value, this.b_dana_now.value); return false;">   
+            Podaj A= 
+                <input  size="6"  name="a_dana_now"> 
+            Podaj B= 
+                <input  size="6"  name="b_dana_now"> 
+                            <br>   <br> 
+                <input  TYPE="submit"  Value="oblicz" > 
+                            <br>   <br> 
+            Pole= 
+                <input  size="6"  name="pole"> 
+            Obwód= 
+                <input  size="6"  name="obw"> 
+        </form> 
+        <br>
+        <table>
+            <tr name="wyprowadz_pole_now"></tr>
+            <tr name="wyprowadz_obwod_now"></tr>
+        </table><br>
+
+    </body>
+</html>
