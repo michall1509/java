@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 34 Nowak</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.5; padding: 20px; color: black; }
+        b { display: block; margin-top: 20px; font-size: 1.1em; }
+        pre { background: none; border: 1px solid black; padding: 10px; font-family: monospace; }
+        p { margin: 5px 0 10px 0; }
+    </style>
+</head>
+<body>
+
+    <h2>Zadanie 34 - Instrukcje warunkowe</h2>
+
+    <b>1) Instrukcja wyboru – składnia teoretyczna</b>
+    <p>Jest to instrukcja if, która sprawdza czy dany warunek jest prawdziwy.</p>
+    <pre>if (warunek) { 
+  // kod do wykonania
+}</pre>
+
+    <b>2) Instrukcja wyboru – schemat blokowy</b>
+    <pre>
+      [ START ]
+          |
+     < WARUNEK? > --- NIE ---> [ KONIEC ]
+          |
+         TAK
+          |
+    [ INSTRUKCJA ]
+          |
+      [ KONIEC ]
+    </pre>
+
+    <b>3) Instrukcja alternatywy – składnia teoretyczna</b>
+    <p>Instrukcja if...else pozwala wykonać jeden blok kodu gdy warunek jest spełniony, a drugi gdy nie jest.</p>
+    <pre>if (warunek) { 
+  // blok gdy prawda 
+} else { 
+  // blok gdy fałsz 
+}</pre>
+
+    <b>4) Instrukcja alternatywy – schemat blokowy</b>
+    <pre>
+           |
+      < WARUNEK? >
+      /          \
+    TAK          NIE
+     |            |
+ [ BLOK A ]   [ BLOK B ]
+      \          /
+       [ KONIEC ]
+    </pre>
+
+    <b>5) Operatory porównania</b>
+    <p>== sprawdza czy wartości są równe</p>
+    <p>!= sprawdza czy wartości są różne</p>
+    <p>< oraz > to mniejszość i większość</p>
+    <p><= oraz >= to mniejszy/większy lub równy</p>
+
+    <b>6) Uwaga do operatorów porównania</b>
+    <p>Należy pamiętać, że pojedynczy znak "=" służy do przypisywania wartości do zmiennej, natomiast podwójny znak "==" służy do porównywania dwóch wartości ze sobą.</p>
+
+    <b>7) Operatory logiczne</b>
+    <p>&& (AND) - obie części muszą być prawdziwe.</p>
+    <p>|| (OR) - wystarczy, że jedna część jest prawdziwa.</p>
+    <p>! (NOT) - zaprzeczenie, zmienia prawdę w fałsz.</p>
+
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html>
+    <body> 
+        <div style="color:red;font-size:50px;"> 
+            wykonał Michał Nowak <br>
+            <script language="JavaScript">
+                var x_now=parseFloat(prompt("podaj argument x=","")); 
+                document.write("czytany argument x="+x_now.toFixed(2)+"<br>");     
+        
+                function f_now(x) { 
+                    if (x >= 2) return 9;
+                    if (x > -2 && x < 0) return Math.pow(x + 1, 2);
+                    if (x >= 0 && x < 2) return (x*x*x) + 1;
+                    if (x <= -2) return 1;
+                } 
+        
+                document.write(`f(${x_now.toFixed(2)})=${f_now(x_now)}`); 
+        
+            </script> 
+        </div> 
+    </body> 
+</html> 
+<!--  nowak Z40_JS  --> 
