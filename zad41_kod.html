@@ -1,0 +1,135 @@
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="pl"&gt; 
+    &lt;head&gt; 
+        &lt;title&gt;Zadanie JavaScript&lt;/title&gt; 
+        &lt;meta charset="utf-8"&gt; 
+        &lt;style&gt; 
+            h1 {
+                text-transform: uppercase; 
+            } 
+        
+        &lt;/style&gt; 
+    &lt;/head&gt; 
+    &lt;body&gt; 
+        &lt;h1&gt;Proste działania&lt;/h1&gt; &lt;br&gt;&lt;br&gt;
+        &lt;h2&gt;nowak klasa 3k&lt;/h2&gt;&lt;br&gt;
+        &lt;label for="a"&gt;Podaj pierwszą liczbę:&lt;/label&gt; &lt;input type="number" id="a"&gt; 
+        &lt;br&gt;&lt;br&gt; 
+        &lt;label for="b"&gt;Podaj drugą liczbę:&lt;/label&gt; &lt;input type="number" id="b"&gt; 
+        &lt;br&gt;&lt;br&gt; 
+        &lt;input type="button" value="DODAWANIE" onclick="suma_now()"&gt; 
+        &lt;input type="button" value="ODEJMOWANIE" onclick="roznica_now()"&gt; 
+        &lt;input type="button" value="MNOŻENIE" onclick="iloczyn_now()"&gt; 
+        &lt;input type="button" value="DZIELENIE" onclick="iloraz_now()"&gt; 
+        &lt;input type="button" value="TEORIA-nowak" onclick="teoria_now()"&gt; 
+        &lt;div id="wynik" style="margin-top:20px;"&gt;&lt;/div&gt; 
+        &lt;script&gt; 
+            function teoria_now()
+            {
+                document.write("&lt;font color=green size=4&gt;pierwsza linia kodu&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;&amp;ltlabel for=\"a\"&amp;gtPodaj pierwszą liczbę:&amp;lt/label&amp;gt&amp;ltinput type=\"number\" id=\"a\"&amp;gt&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=green size=4&gt;wytłumaczenie:&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;Ta linijka kodu HTML tworzy interfejs użytkownika składający się z &lt;b&gt;&lt;u&gt;etykiety (label)&lt;/u&gt;&lt;/b&gt;[opis wprowadzania danych, czyli tekst przed polem input] i &lt;b&gt;&lt;u&gt;pola do wprowadzania danych (input)&lt;/u&gt;&lt;/b&gt; w języku JavaScript (oraz HTML). &lt;b&gt;label i input&lt;/b&gt; współpracują między sobą.&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;br&gt;&lt;br&gt;");
+
+                document.write("&lt;font color=green size=4&gt;druga linia kodu&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;&amp;ltinput type=\"button\" value=\"DODAWANIE\" onclick=\"suma_now()\"&amp;gt&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=green size=4&gt;wytłumaczenie:&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;Wykonanie przycisku o nazwie DODAWANIE i z takim samym napisem, kliknięcie myszką uruchamia funkcję suma_now()&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;br&gt;&lt;br&gt;");
+
+                document.write("&lt;font color=green size=4&gt;trzecia linia kodu&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;var a = document.getElementById\"a\").value;&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=green size=4&gt;wytłumaczenie:&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;wpisanie do zmiennej \"a\" wartości z elementu o Id \"a\" (zbieżność nazw)&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;br&gt;&lt;br&gt;");
+
+                document.write("&lt;font color=green size=4&gt;czwarta linia kodu&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;if (a == \"\" || b == \"\")&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=green size=4&gt;wytłumaczenie:&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;sprawdzenie czy pola \"a\" lub \"b\" są puste.&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;br&gt;&lt;br&gt;");
+
+                document.write("&lt;font color=green size=4&gt;piąta linia kodu&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;document.getElementById(\"wynik\").innerHTML = \"Wynik działania wynosi:\" + suma;&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=green size=4&gt;wytłumaczenie:&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;font color=red size=4&gt;pobranie wartości Id o nazwie \"wynik\" i wyprowadzenie w oknie przglądarki tekstu \"Wynik działania wynosi: \" oraz wartości zmiennej suma;&lt;/font&gt;&lt;br&gt;");
+                document.write("&lt;br&gt;&lt;br&gt;");
+            }
+
+            function suma_now() 
+            { 
+                var a = document.getElementById("a").value; 
+                var b = document.getElementById("b").value; 
+                if (a == "" || b == "") 
+                { 
+                    document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+                } 
+                else 
+                { 
+                    a = parseFloat(a); 
+                    b = parseFloat(b); 
+                    var suma = a + b; 
+                    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma; 
+                } 
+            } 
+            function roznica_now() 
+            { 
+                var a = document.getElementById("a").value; 
+                var b = document.getElementById("b").value; 
+                if (a == "" || b == "") 
+                { 
+                    document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+                } 
+                else 
+                { 
+                    a = parseFloat(a); 
+                    b = parseFloat(b); 
+                    var roznica = a - b; 
+                    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica; 
+                } 
+            } 
+            function iloczyn_now() 
+            { 
+                var a = document.getElementById("a").value; 
+                var b = document.getElementById("b").value; 
+                if (a == "" || b == "") 
+                { 
+                    document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+                } 
+                else 
+                { 
+                    a = parseFloat(a); 
+                    b = parseFloat(b); 
+                    var iloczyn = a * b; 
+                    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn; 
+                } 
+            }   
+    
+            function iloraz_now() 
+            { 
+                var a = document.getElementById("a").value; 
+                var b = document.getElementById("b").value; 
+                if (a == "" || b == "") 
+                { 
+                    document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+                } 
+                else 
+                { 
+                    a = parseFloat(a); 
+                    b = parseFloat(b); 
+                    if (b == 0) 
+                    { 
+                        document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero."; 
+                    } 
+                    else 
+                    {          
+                    var iloraz = a / b; 
+                        document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz; 
+                    } 
+                } 
+            } 
+        &lt;/script&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt;
+&lt;!-- Michał nowak 3k_g1 Z41_JS--&gt;
