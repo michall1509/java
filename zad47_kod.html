@@ -1,0 +1,36 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Zadanie 47&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Zadanie 47&lt;/h1&gt;
+    &lt;p&gt;ilość wykonania pętli = 11&lt;/p&gt;
+    &lt;p&gt;wielkość liter = 42px&lt;/p>
+
+    &lt;script&gt;
+        let koniec_petli_now = prompt("Podaj dowolną liczbę:", "10");
+        koniec_petli_now = parseInt(koniec_petli_now);
+
+        let kolor_now;
+        let tekst_now;
+
+        if (koniec_petli_now % 2 === 0) {
+            kolor_now = "blue";
+            tekst_now = "Nowak";
+        } else {
+            kolor_now = "green";
+            tekst_now = "Michał";
+        }
+
+        document.write("&lt;div style='font-size: 42px; color: " + kolor_now + ";'&gt;");
+        for (let i_n = 1; i_n &lt;= 11; i_n++) {
+            document.write(i_n + ". " + tekst_now + "&lt;br&gt;");
+        }
+        document.write("&lt;/div&gt;");
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;

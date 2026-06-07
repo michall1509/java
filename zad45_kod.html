@@ -1,0 +1,22 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Zadanie 45&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Zadanie 45&lt;/h1&gt;
+    &lt;script&gt;
+        let koniec_petli_now = prompt("Podaj liczbę końcową pętli:", "20");
+        koniec_petli_now = parseInt(koniec_petli_now);
+
+        document.write("Liczby parzyste od 2 do " + koniec_petli_now + ":&lt;br&gt;");
+
+        for (let i_n = 2; i_n &lt;= koniec_petli_now; i_n += 2) {
+            document.write(i_n + " ");
+        }
+    &lt;/script>
+
+&lt;/body&gt;
+&lt;/html&gt;

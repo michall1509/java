@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 53</title>
+</head>
+<body>
+
+    <script>
+        let ile_razy = parseInt(prompt("ile razy powtórzyć=", "5"));
+        let inicjaly = prompt("podaj twoje inicjały=", "MN");
+
+        for (var i = 1; i <= ile_razy; i++) {
+            for (var n = 1; n <= i; n++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            document.write(i + "_" + inicjaly + "_" + i + "<br>");
+        }
+    </script>
+
+</body>
+</html>

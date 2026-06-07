@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 51 Nowak</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="color:black; font-size:24px; font-family:sans-serif;">
+        <script>
+            let n_now = parseInt(prompt("Podaj liczbę n:", "6"));
+            let silnia_now = 1;
+
+            if (n_now > 0) {
+                for (let i_now = 1; i_now <= n_now; i_now++) {
+                    silnia_now = silnia_now * i_now;
+                }
+            }
+
+            document.write("n=" + n_now + "<br>");
+            document.write(n_now + "!=" + silnia_now);
+        </script>
+    </div>
+</body>
+</html>

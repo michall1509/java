@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47_michał nowak</title>
+</head>
+<body>
+
+    <h1>Zadanie 47</h1>
+    
+    <p>ilość wykonania pętli = 11</p>
+    <p>wielkość liter = 42px</p>
+
+    <script>
+        let koniec_petli_now = prompt("Podaj dowolną liczbę:", "10");
+        koniec_petli_now = parseInt(koniec_petli_now);
+
+        let kolor_now;
+        let tekst_now;
+
+        if (koniec_petli_now % 2 === 0) {
+            kolor_now = "blue";
+            tekst_now = "Nowak";
+        } else {
+            kolor_now = "green";
+            tekst_now = "Michał";
+        }
+
+        document.write("<div style='font-size: 42px; color: " + kolor_now + ";'>");
+        for (let i_n = 1; i_n <= 11; i_n++) {
+            document.write(i_n + ". " + tekst_now + "<br>");
+        }
+        document.write("</div>");
+    </script>
+
+</body>
+</html>

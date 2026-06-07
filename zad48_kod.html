@@ -1,0 +1,27 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 48 Nowak&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style="color:red;font-size:50px;"&gt;
+        &lt;script&gt;
+            let h_now;
+            do {
+                let liczba1 = prompt("wysokość=", "");
+                h_now = parseFloat(liczba1);
+            } while (h_now &lt;= 0);
+
+            let a_now;
+            do {
+                let liczba1 = prompt("podstawę=", "");
+                a_now = parseFloat(liczba1);
+            } while (!(a_now &gt; 0));
+
+            let Pole = a_now * h_now / 2;
+            document.write("Pole=" + Pole.toFixed(2) + " cm^2" + "&lt;br&gt;");
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;

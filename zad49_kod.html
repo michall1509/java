@@ -1,0 +1,36 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 49 Nowak&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style="color:blue; font-size:40px;"&gt;
+        &lt;script&gt;
+            let a_now, b_now, c_now;
+            let warunek_now;
+
+            do {
+                a_now = parseFloat(prompt("Podaj bok a:", ""));
+                b_now = parseFloat(prompt("Podaj bok b:", ""));
+                c_now = parseFloat(prompt("Podaj bok c:", ""));
+
+                let dodatnie = (a_now &gt; 0) && (b_now &gt; 0) && (c_now &gt; 0);
+                let nierownosc = (a_now + b_now &gt; c_now) && (a_now + c_now &gt; b_now) && (c_now + b_now &gt; a_now);
+
+                if (dodatnie && nierownosc) {
+                    warunek_now = false;
+                } else {
+                    warunek_now = true;
+                    alert("Podane boki nie tworzą trójkąta! Spróbuj ponownie.");
+                }
+            } while (warunek_now);
+
+            document.write("Podane boki tworzą trójkąt:&lt;br&gt;");
+            document.write("a = " + a_now + "&lt;br&gt;");
+            document.write("b = " + b_now + "&lt;br&gt;");
+            document.write("c = " + c_now + "&lt;br&gt;");
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;

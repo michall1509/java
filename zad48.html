@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Sprawdzenie danych Nowak</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="color:red;font-size:50px;">
+        <script>
+            let h_now;
+            do {
+                let liczba1 = prompt("wysokość=", "");
+                h_now = parseFloat(liczba1);
+            } while (h_now <= 0);
+
+            let a_now;
+            do {
+                let liczba1 = prompt("podstawę=", "");
+                a_now = parseFloat(liczba1);
+            } while (!(a_now > 0));
+
+            let Pole = a_now * h_now / 2;
+            document.write("Pole=" + Pole.toFixed(2) + " cm^2" + "<br>");
+        </script>
+    </div>
+</body>
+</html>

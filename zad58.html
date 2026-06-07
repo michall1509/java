@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 58</title>
+</head>
+<body>
+
+    <script>
+        for (let i_now = 0; i_now <= 39; i_now++) {
+            let w_i = (i_now * i_now) + i_now + 41;
+            document.write("i=" + i_now + "&nbsp;&nbsp;&nbsp;&nbsp;w(" + i_now + ")=" + w_i + "<br>");
+            
+            if ((i_now + 1) % 5 === 0) {
+                document.write("<br>");
+            }
+        }
+    </script>
+
+</body>
+</html>

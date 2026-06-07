@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 59</title>
+</head>
+<body>
+
+    <script>
+        let start_now = 14;
+        let koniec_now = start_now + 15;
+        let licznik_now = 0;
+
+        for (let i_now = start_now; i_now <= koniec_now; i_now++) {
+            let pierw_2 = Math.sqrt(i_now);
+            let pierw_4 = Math.sqrt(pierw_2);
+
+            document.write("i=" + i_now + "&nbsp;&nbsp;&nbsp;&nbsp;pierw_2(" + i_now + ")=" + pierw_2.toFixed(2) + "&nbsp;&nbsp;&nbsp;&nbsp;pierw_4(" + i_now + ")=" + pierw_4.toFixed(2) + "<br>");
+            
+            licznik_now++;
+            if (licznik_now % 3 === 0) {
+                document.write("<br>");
+            }
+        }
+    </script>
+
+</body>
+</html>
