@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Zadanie 82</title>
+    <script language="JavaScript">
+        function pushbutton() {
+            alert("Czesz !");
+        }
+    </script>
+</head>
+<body>
+
+    <div style="color: red; font-size: 38px; font-weight: bold;">Nowak</div>
+
+    <div style="color: green; font-family: monospace; font-size: 16px; line-height: 1.4;">
+        dzis = new Date()--> wpisz co oznacza ten zapis<br>
+        dzis = dzis.getHours()--> wpisz co oznacza ten zapis<br>
+        dzis = dzis.getMinutes()--> wpisz co oznacza ten zapis<br>
+        dzis = dzis.getMonth()+1--> wpisz co oznacza ten zapis<br>
+        dzis = dzis.getDate()--> wpisz co oznacza ten zapis<br>
+        dzis = dzis.getFullYear()--> wpisz co oznacza ten zapis<br>
+    </div>
+
+    <br>Ostatnio zmodyfikowany
+    <script language="JavaScript">
+        document.write(document.lastModified, "<br>")
+    </script>
+
+    <form>
+        <input type="button" name="Button1" value="Naciśnij mnie" onclick="pushbutton()">
+    </form>
+
+    <script language="JavaScript">
+        dzis = new Date()
+        document.write("<br>Aktualny czas : ",dzis.getHours(),":",dzis.getMinutes())
+        document.write("<br>Aktualna data : ",dzis.getMonth()+1,",",dzis.getDate(),",",dzis.getFullYear());
+
+        
+        var dd = dzis.getDate();
+        var mm = dzis.getMonth() + 1;
+        var yy = dzis.getFullYear().toString().substring(2); 
+
+        
+        if(dd < 10) dd = "0" + dd;
+        if(mm < 10) mm = "0" + mm;
+
+        
+        document.write("<br><br><span style='font-size:38px; font-weight:bold;'>");
+        document.write("<span style='color:red'>" + dd + "</span>:");
+        document.write("<span style='color:green'>" + mm + "</span>:");
+        document.write("<span style='color:blue'>" + yy + "</span>");
+        document.write("</span>");
+    </script>
+
+</body>
+</html>

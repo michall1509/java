@@ -1,0 +1,52 @@
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 82&lt;/title&gt;
+    &lt;script language="JavaScript"&gt;
+        function pushbutton() {
+            alert("Czesz !");
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div style="color: red; font-size: 38px; font-weight: bold;"&gt;Nowak&lt;/div&gt;
+
+    &lt;div style="color: green; font-family: monospace; font-size: 16px; line-height: 1.4;"&gt;
+        dzis = new Date()--&gt; wpisz co oznacza ten zapis&lt;br&gt;
+        dzis = dzis.getHours()--&gt; wpisz co oznacza ten zapis&lt;br&gt;
+        dzis = dzis.getMinutes()--&gt; wpisz co oznacza ten zapis&lt;br&gt;
+        dzis = dzis.getMonth()+1--&gt; wpisz co oznacza ten zapis&lt;br&gt;
+        dzis = dzis.getDate()--&gt; wpisz co oznacza ten zapis&lt;br&gt;
+        dzis = dzis.getFullYear()--&gt; wpisz co oznacza ten zapis&lt;br&gt;
+    &lt;/div&gt;
+
+    &lt;br&gt;Ostatnio zmodyfikowany
+    &lt;script language="JavaScript"&gt;
+        document.write(document.lastModified, "&lt;br&gt;")
+    &lt;/script>
+
+    &lt;form&gt;
+        &lt;input type="button" name="Button1" value="Naciśnij mnie" onclick="pushbutton()"&gt;
+    &lt;/form&gt;
+
+    &lt;script language="JavaScript"&gt;
+        dzis = new Date()
+        document.write("&lt;br&gt;Aktualny czas : ",dzis.getHours(),":",dzis.getMinutes())
+        document.write("&lt;br&gt;Aktualna data : ",dzis.getMonth()+1,",",dzis.getDate(),",",dzis.getFullYear());
+
+        var dd = dzis.getDate();
+        var mm = dzis.getMonth() + 1;
+        var yy = dzis.getFullYear().toString().substring(2); 
+
+        if(dd &lt; 10) dd = "0" + dd;
+        if(mm &lt; 10) mm = "0" + mm;
+
+        document.write("&lt;br&gt;&lt;br&gt;&lt;span style='font-size:38px; font-weight:bold;'&gt;");
+        document.write("&lt;span style='color:red'&gt;" + dd + "&lt;/span&gt;:");
+        document.write("&lt;span style='color:green'&gt;" + mm + "&lt;/span&gt;:");
+        document.write("&lt;span style='color:blue'&gt;" + yy + "&lt;/span&gt;");
+        document.write("&lt;/span&gt;");
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
